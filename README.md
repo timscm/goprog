@@ -4,8 +4,10 @@ Learning "The Go Programming Language"
 
 # go env
 
+```bash
 export GOPATH=$HOME/golabs
 export GOROOT=$HOME/sdk/go1.16.7
+```
 
 # goland settings
 

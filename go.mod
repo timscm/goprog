@@ -1,3 +1,3 @@
-module github.com/timscm/goprog
+module goprog
 
 go 1.16
