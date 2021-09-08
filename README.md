@@ -5,8 +5,15 @@ Learning "The Go Programming Language"
 # go env
 
 ```bash
-export GOPATH=$HOME/golabs
-export GOROOT=$HOME/sdk/go1.16.7
+export GOPATH=${HOME}/golabs
+export GOROOT=${HOME}/sdk/go1.17
+export GOPROXY=https://goproxy.cn
+export PATH=$PATH:$GOROOT/bin:$GOPATH/bin
+
+export PS1='\[\e]0;\u@\h: \W\a\]${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\W\[\033[00m\]\$ '
+
+set -o ignoreeof
+
 ```
 
 # goland settings
@@ -46,3 +53,14 @@ golang/
 |-- README.md
 ```
 
+# Running commands
+
+```bash
+go mod tidy
+go mod vendor
+go get rsc.io/quote
+
+go get -u github.com/kardianos/govendor
+govendor init
+govendor fetch github.com/go-sql-driver/mysql
+```
