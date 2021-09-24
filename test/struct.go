@@ -2,6 +2,19 @@ package main
 
 import "fmt"
 
+type A2 struct {
+	B2
+	C2
+}
+
+type B2 struct {
+	Name string
+}
+
+type C2 struct {
+	Name string
+}
+
 type test struct{}
 
 type person struct {
@@ -26,6 +39,9 @@ type person2 struct {
 }
 
 func main() {
+	aaa := A2{B2: B2{Name: "B"}, C2: C2{Name: "C"}}
+	fmt.Println("aaa:", aaa.B2.Name, aaa.C2.Name)
+
 	// 组合结构体的使用
 	a2 := person2{Name: "joe", Age: 19, human: human{Sex: 9}}
 	a2.Name = "joe222"
