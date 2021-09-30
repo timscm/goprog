@@ -13,7 +13,7 @@ func TestSliceInit(t *testing.T) {
 
 	s2 := make([]int, 3, 5)
 	t.Log(len(s2), cap(s2))
-	// s2[3]: 越界
+	// s2[3]: 运行时报错，越界
 	// t.Log(s2[0], s2[1], s2[2], s2[3])
 	t.Log(s2[0], s2[1], s2[2])
 	s2 = append(s2, 1)
@@ -48,5 +48,12 @@ func TestSliceCompare(t *testing.T) {
 	// if a == b {
 	if a != nil && b != nil {
 		t.Log("true")
+	}
+}
+
+func TestSliceTravel(t *testing.T) {
+	a := []int{1, 2, 3, 4}
+	for idx, e := range a {
+		t.Log(idx, e)
 	}
 }
